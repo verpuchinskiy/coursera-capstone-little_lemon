@@ -8,6 +8,8 @@ import Reservations from "./components/pages/Reservations";
 import Order from "./components/pages/Order";
 import Login from "./components/pages/Login";
 import { Routes, Route } from "react-router-dom";
+import BookingPage from "./components/pages/Booking";
+import BookingConfirmationPage from "./components/pages/ConfirmedBooking";
 
 const Homepage = () => {
   return (
@@ -29,6 +31,11 @@ function App() {
         <Route path="reservations" element={<Reservations />} />
         <Route path="order" element={<Order />} />
         <Route path="login" element={<Login />} />
+        <Route path="booking" element={<BookingPage />} />
+        <Route
+          path="booking_confirmation"
+          element={<BookingConfirmationPage />}
+        />
       </Routes>
     </>
   );

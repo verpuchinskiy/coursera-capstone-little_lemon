@@ -3,6 +3,7 @@ import Special1 from "../img/special1.jpg";
 import Special2 from "../img/special2.jpg";
 import Special3 from "../img/special3.jpg";
 import Delivery from "../img/delivery.png";
+import { useNavigate } from "react-router-dom";
 
 const specials = [
   {
@@ -60,6 +61,11 @@ const testimonials = [
 ];
 
 const Main = () => {
+  const navigate = useNavigate();
+  const goToBookingPage = () => {
+    navigate("/booking");
+  };
+
   return (
     <main>
       <section className="hero">
@@ -70,7 +76,7 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button>Reserve a Table</button>
+          <button className="booking_btn" onClick={goToBookingPage}>Reserve a Table</button>
           <picture>
             <img src={MainImage} alt="restaurant food" />
           </picture>
@@ -110,7 +116,7 @@ const Main = () => {
           <div className="testimonials_alignment">
             {testimonials.map((testimonial) => {
               return (
-                <div className="single_testimonial">
+                <div className="single_testimonial" key={testimonial.name}>
                   <h2>{testimonial.rating}</h2>
                   <div className="testimonial_img-name">
                     <img src={testimonial.image} alt={testimonial.name} />

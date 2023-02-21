@@ -81,6 +81,15 @@ button {
   font-weight: 700;
 }
 
+.booking_btn:hover {
+  background-color: #b0950c;
+  color: white;
+}
+
+.booking_btn:active {
+  background-color: #ee9972;
+}
+
 h1,
 h2,
 h3 {
@@ -272,6 +281,26 @@ footer {
 .footer_social ul > li {
   padding: 0.3rem 0;
 }
+
+/*--------------------Booking Page--------------------*/
+
+.booking_heading {
+  text-align: center;
+}
+
+/*====================================================*/
+
+/*--------------------Booking Confirmation Page--------------------*/
+
+.booking_confirmation {
+  text-align: center;
+}
+
+.booking_confirmation img {
+  width: 20vw;
+}
+
+/*====================================================*/
 
 @media screen and (max-width: 850px) {
   .hamburger {
