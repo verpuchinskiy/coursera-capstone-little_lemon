@@ -76,7 +76,7 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className="booking_btn" onClick={goToBookingPage}>Reserve a Table</button>
+          <button className="booking_btn" onClick={goToBookingPage} aria-label="On Click">Reserve a Table</button>
           <picture>
             <img src={MainImage} alt="restaurant food" />
           </picture>

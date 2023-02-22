@@ -12,6 +12,7 @@ nav {
 
 .logo {
   max-width: 10rem;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -298,6 +299,14 @@ footer {
 
 .booking_confirmation img {
   width: 20vw;
+}
+
+/*====================================================*/
+
+/*--------------------Template Headings--------------------*/
+
+.template_heading {
+  text-align: center;
 }
 
 /*====================================================*/

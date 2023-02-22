@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import Logo from "../Logo.svg";
 
 const LemonLogo = () => {
-  return <img src={Logo} alt="Logo" className="logo" />;
+  const navigate = useNavigate();
+
+  const goToMainPage = () => {
+    navigate("/");
+  };
+
+  return <img src={Logo} alt="Logo" className="logo" onClick={goToMainPage} />;
 };
 
 export default LemonLogo;

@@ -45,6 +45,8 @@ const BookingForm = ({ times, showAvailableTimes, onSubmitForm }) => {
         <input
           type="date"
           id="res-date"
+          min="2023-02-22"
+          max="2023-05-01"
           value={date}
           onChange={(e) => {
             setDate(e.target.value);
@@ -80,7 +82,7 @@ const BookingForm = ({ times, showAvailableTimes, onSubmitForm }) => {
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" value="Make Your Reservation" />
+        <input type="submit" value="Make Your Reservation" disabled={guestsNumber > 10 || guestsNumber < 1 || !date} />
       </form>
     </>
   );
